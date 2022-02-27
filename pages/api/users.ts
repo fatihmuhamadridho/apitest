@@ -11,8 +11,12 @@ const handler = async(req: any, res: any) => {
             email: email,
             password: password
         }
-        await Users.add(data);
+        await Users.doc('1').set(data);
         res.send({ message: "User added" });
+    } else if  (req.method === "DELETE") {
+        const { id } = req.body;
+        await Users.doc(id).delete();
+        res.send({ message: "User deleted"})
     }
 }
 
