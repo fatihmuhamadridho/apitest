@@ -15,5 +15,6 @@ admin.initializeApp({ credential: admin.credential.cert({
 }) })
 const db = admin.firestore();
 const Users = db.collection("Users");
+const Mart = db.collection("Mart");
 
-module.exports = { Users };
+module.exports = { Users, Mart };

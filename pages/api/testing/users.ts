@@ -1,4 +1,4 @@
-const { Users } = require('./config');
+const { Users } = require('../config');
 
 const handler = async(req: any, res: any) => {
     if (req.method === "GET") {
